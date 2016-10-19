@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Tournament Manager</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="assets/lib/siimple.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        
+        <div class="grid grid-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Tournament Manager</h1>
+                    <h2>Atletas</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <td>
+                                    <span>Filter by Category:</span>
+                                    <select id="filter">
+                                        <option value="aa">aa</option> 
+                                        <option value="ab">ab</option> 
+                                        <option value="ac">ac</option> 
+                                        <option value="ad">ad</option> 
+                                        <option value="ae">ae</option>
+                                        <option value="af">af</option> 
+                                        <option value="ag">ag</option>
+                                        <option value="bb">bb</option>
+                                        <option value="bc">bc</option>
+                                        <option value="bd">bd</option>
+                                        <option value="be">be</option>
+                                        <option value="bf">bf</option> 
+                                        <option value="bg">bg</option> 
+                                        <option value="ca">ca</option> 
+                                        <option value="cb">cb</option>
+                                        <option value="cc">cc</option> 
+                                        <option value="cd">cd</option>
+                                        <option value="ce">ce</option>
+                                        <option value="cf">cf</option>
+                                        <option value="cg">cg</option>
+                                        <option value="da">da</option>
+                                        <option value="db">db</option>
+                                        <option value="dc">dc</option>
+                                        <option value="dd">dd</option>
+                                        <option value="de">de</option> 
+                                        <option value="df">df</option>
+                                        <option value="dg">dg</option>
+                                        <option value="ea">ea</option> 
+                                        <option value="eb">eb</option> 
+                                        <option value="ec">ec</option> 
+                                        <option value="ed">ed</option>
+                                        <option value="ef">ef</option> 
+                                        <option value="eg">eg</option> 
+                                        <option value="fa">fa</option> 
+                                        <option value="fb">fb</option> 
+                                        <option value="fc">fc</option> 
+                                        <option value="fd">fd</option> 
+                                        <option value="fe">fe</option> 
+                                        <option value="ff">ff</option>
+                                        <option value="fg">fg</option> 
+                                        <option value="ga">ga</option> 
+                                        <option value="gb">gb</option> 
+                                        <option value="gc">gc</option> 
+                                        <option value="gd">gd</option> 
+                                        <option value="ge">ge</option> 
+                                        <option value="gf">gf</option> 
+                                        <option value="gg">gg</option>
+                                        <option value="ha">ha</option> 
+                                        <option value="hb">hb</option> 
+                                        <option value="hc">hc</option> 
+                                        <option value="hd">hd</option> 
+                                        <option value="he">he</option> 
+                                        <option value="hf">hf</option> 
+                                        <option value="hg">hg</option> 
+                                        <option value="ia">ia</option>
+                                        <option value="ib">ib</option> 
+                                        <option value="ic">ic</option> 
+                                        <option value="id">id</option>
+                                        <option value="ie">ie</option> 
+                                        <option value="if">if</option> 
+                                        <option value="ig">ig</option> 
+                                        <option value="ja">ja</option> 
+                                        <option value="jb">jb</option> 
+                                        <option value="jc">jc</option> 
+                                        <option value="jd">jd</option> 
+                                        <option value="je">je</option> 
+                                        <option value="jf">jf</option> 
+                                        <option value="jg">jg</option> 
+                                        <option value="la">la</option> 
+                                        <option value="lb">lb</option> 
+                                        <option value="lc">lc</option> 
+                                        <option value="ld">ld</option> 
+                                        <option value="le">le</option> 
+                                        <option value="lf">lf</option> 
+                                        <option value="lg">lg</option> 
+                                        <option value="ka">ka</option> 
+                                        <option value="kb">kb</option> 
+                                        <option value="kc">kc</option> 
+                                        <option value="kd">kd</option> 
+                                        <option value="ke">ke</option> 
+                                        <option value="kf">kf</option> 
+                                        <option value="kg">kg</option> 
+                                    </select>
+                                </td>
+                            </tr>
+                        </thead>
+                    </table>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <td>Nome</td>
+                                <td>Faixa</td>
+                                <td>Idade</td>
+                                <td>Peso (kg)</td>
+                                <td>Categoria</td>
+                                <td>Academia</td>
+                            </tr>
+                        </thead>
+                        <tbody id="allathletes">
+                            
+                        </tbody>
+                    </table>
+                    <form id="importarAtletas">
+                        <input type="file" name="getAthletes" id="getAthletes">
+                    </form>
+                    <!--
+                    <h2> Chaves </h2>
+                    <table class="table table-striped chave-1">
+                        <thead>
+                            <tr>
+                                <td>Nome</td>
+                                <td>Semi Final</td>
+                                <td>Final</td>
+                                <td>Ganhador</td>
+                            </tr>
+                        </thead>
+                        <tbody id="chave-1" class="chaves">
+                            <tr>
+                                <td><span class="draggable" id="athlete-1"> Fulano A </span></td>
+                                <td rowspan="2" class="droppable" id="winner-semi-1" ></td>
+                                <td rowspan="3" class="droppable" id="winner-final-1" ></td>
+                                <td rowspan="5" class="droppable" id="winner" ></td>
+                            </tr>
+                            <tr>
+                                <td class="droppable" ><span class="draggable" id="athlete-2"> Fulano B </span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="draggable" id="athlete-3"> Fulano C </span></td>
+                                <td rowspan="2" class="droppable" id="winner-semi-2" ></td>
+                            </tr>
+                            <tr>
+                                <td><span class="draggable" id="athlete-4"> Fulano D </span></td>
+                                <td rowspan="2" class="droppable" id="winner-final-2"><span class="draggable"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="draggable" id="athlete-5"> Fulano E </span></td>
+                                <td id="winner-semi-3" class="droppable"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    -->
+                    <div id="messages" class="messages">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scripts">
+            <script src="assets/lib/jquery-3.0.0.min.js"></script>
+            <script src="assets/lib/jquery-ui.min.js"></script>
+            <script src="assets/js/main.js"></script>
+        </div>
+    </body>
+</html>

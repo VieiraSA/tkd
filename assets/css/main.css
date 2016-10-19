@@ -1,0 +1,9 @@
+.chaves .draggable
+{
+    cursor:all-scroll;
+}
+.table tr td
+{
+    min-height : 43px;
+}
+
